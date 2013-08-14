@@ -1,0 +1,15 @@
+#addl_pay\.LoginFlexBox .sapMFlexItem{
+ 	padding-top : 5px;
+	padding-bottom : 5px;
+	padding-right : 2px;
+	padding-left : 2px; 
+}
+.sap-ios .sapMListHdrInset{
+	padding-bottom : 8px;
+	padding-left : 5px; 
+}
+
+/* Custom List Items*/
+#addl_pay\.PenReqsList .sapMText{
+	padding-left : 10px; 
+}

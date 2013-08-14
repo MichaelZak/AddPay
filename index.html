@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+       <head>
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   			  <script src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
+                      id="sap-ui-bootstrap"
+                      data-sap-ui-libs="sap.m"
+                      data-sap-ui-theme="sap_mvi" >
+              </script>
+			  <script src="phonegap.js"></script>
+              <!-- only load the mobile lib "sap.m" and the "sap_mvi" theme -->
+			  
+   			  <script>
+			         sap.ui.localResources("addl_pay");
+			         
+			         //Global vars TRANSFER TO APP>JS
+			         var sInputIO,sCostCenter,iVar,sShiftTypeText,sPaymentOptionDesc,sShiftReqID,sCostCenterSetID;
+			         var oFilterRequestedBy;
+			         //set oData model, URL etc
+			         var sServiceUrl = "http://localhost:52033/AddPayReqDataService.svc/";
+			         var oServiceModel = new sap.ui.model.odata.ODataModel(sServiceUrl,false);
+
+                      jQuery.sap.registerModulePath('ApplicationBase', 'ApplicationBase'); // this file will be loaded directly from the same directory
+                      jQuery.sap.registerModulePath('Application', 'Application');
+
+                      // Launch application
+                      jQuery.sap.require("Application");
+                      var oApp = new Application({root : "content"}); // instantiate your application and mark the HTML element with id "content" as location for the UI
+                     
+   			  </script>
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+       </head>
+       <body class="sapUiBody" role="application">
+              <div id="content"></div>
+       </body>
+</html>
